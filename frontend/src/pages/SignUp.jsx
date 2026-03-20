@@ -3,7 +3,7 @@ import styles from "./Login.module.css";
 import CustomButton from "../components/CustomButton";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-
+import API_BASE_URL from "../config/api";
 export default function SignUp() {
   let navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -49,7 +49,7 @@ export default function SignUp() {
     console.log(email, password, name, role, phone);
     let payload = { name, email, password, role, phone };
     try {
-      let res = await axios.post('http://localhost:5000/register', payload, {
+       let res = await axios.post(`${API_BASE_URL}/register`, payload, {
         headers: {
           "Content-Type": "application/json",
         },
