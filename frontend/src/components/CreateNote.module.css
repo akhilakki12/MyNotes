@@ -1,0 +1,178 @@
+/* ===== Main Container ===== */
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #667eea, #764ba2, #6dd5ed);
+  background-size: 200% 200%;
+  animation: gradientMove 10s ease infinite;
+}
+
+/* Gradient animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== Form Card ===== */
+.formContainer {
+  width: 90%;
+  max-width: 600px;
+
+  padding: 40px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+
+  color: white;
+}
+
+/* ===== Title ===== */
+.title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+
+  background: linear-gradient(to right, #ffffff, #cfd9ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== Form ===== */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ===== Form Group ===== */
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Labels ===== */
+.label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ===== Inputs ===== */
+.input,
+.textarea {
+  padding: 12px 14px;
+  border-radius: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+
+  color: white;
+  font-size: 14px;
+
+  outline: none;
+  transition: 0.3s ease;
+}
+
+/* Placeholder */
+.input::placeholder,
+.textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Focus effect */
+.input:focus,
+.textarea:focus {
+  border-color: #cfd9ff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ===== Buttons ===== */
+.buttonGroup {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Cancel Button */
+.cancelButton {
+  padding: 10px 16px;
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cancelButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Submit Button */
+.submitButton {
+  padding: 10px 18px;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  border: none;
+
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Disabled state */
+.submitButton:disabled,
+.cancelButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===== Error ===== */
+.error {
+  color: #ff6b6b;
+  font-size: 14px;
+  text-align: center;
+}
+/* Title */
+.right_top h1,
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Subtitles */
+.welcomeMessage h2,
+.noteContent h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+/* Content text */
+.welcomeMessage p,
+.noteContent p,
+.input,
+.textarea {
+  font-family: 'Inter', sans-serif;
+}

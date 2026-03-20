@@ -1,0 +1,66 @@
+.profileCard {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    max-width: 420px;
+    margin: 3rem auto;
+    transition: box-shadow 0.3s ease;
+}
+
+.profileCard:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.title {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 28px;
+}
+
+.profileInfo {
+    margin-bottom: 1.5rem;
+}
+
+.profileInfo p {
+    margin: 12px 0;
+    color: #34495e;
+    font-size: 15px;
+}
+
+.label {
+    font-weight: 700;
+    color: #3498db;
+    margin-right: 8px;
+}
+
+.err {
+    background-color: #fee;
+    color: #c33;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    border-left: 4px solid #e74c3c;
+}
+
+.btn {
+    margin-top: 0.8rem;
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
+}
+
+.btn:active {
+    transform: translateY(0);
+}

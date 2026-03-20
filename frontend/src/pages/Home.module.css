@@ -1,0 +1,149 @@
+/* ===== Main Layout ===== */
+.container {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+/* ===== Left Sidebar ===== */
+.left {
+  width: 280px;
+  background: #0f172a;
+  color: white;
+  padding: 20px;
+  overflow-y: auto;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Scrollbar for sidebar */
+.left::-webkit-scrollbar {
+  width: 6px;
+}
+
+.left::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+/* ===== Right Section ===== */
+.right {
+  flex: 1;
+  padding: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #667eea, #764ba2, #6dd5ed);
+  background-size: 200% 200%;
+  animation: gradientMove 10s ease infinite;
+}
+
+/* Gradient animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== Glass Card ===== */
+.right_top {
+  width: 70%;
+  max-width: 850px;
+
+  padding: 40px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+
+  text-align: center;
+  color: white;
+
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.right_top:hover {
+  transform: translateY(-5px) scale(1.01);
+}
+
+/* ===== Title ===== */
+.right_top h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+
+  background: linear-gradient(to right, #ffffff, #cfd9ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== Welcome Section ===== */
+.welcomeMessage h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.welcomeMessage p {
+  font-size: 15px;
+  opacity: 0.85;
+}
+
+/* ===== Note Content ===== */
+.noteContent {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.noteContent h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.noteContent p {
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* ===== Smooth Scroll ===== */
+.right {
+  scroll-behavior: smooth;
+}
+
+/* ===== Scrollbar Right ===== */
+.right::-webkit-scrollbar {
+  width: 8px;
+}
+
+.right::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+/* Title */
+.right_top h1,
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Subtitles */
+.welcomeMessage h2,
+.noteContent h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+/* Content text */
+.welcomeMessage p,
+.noteContent p,
+.input,
+.textarea {
+  font-family: 'Inter', sans-serif;
+}
