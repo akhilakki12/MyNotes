@@ -22,7 +22,7 @@ export default function Login() {
         }
         setErr("");
         try {
-            let res = await axios.post('http://localhost:5000/login', { email, password }, {
+            let res = await axios.post(`${API_BASE_URL}/login`, { email, password }, {
                 headers: {
                     "Content-Type": "application/json"
                 }
