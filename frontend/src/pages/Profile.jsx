@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import styles from './Profile.module.css'
 import axios from 'axios'
 import CustomButton from '../components/CustomButton';
-import NavBar from '../components/Navigation';
+import Navigation from '../components/Navigation';
 import { useNavigate } from 'react-router-dom';
+import API_BASE_URL from '../config/api';
 export default function Profile() {
   let [err, setErr] = useState("");
   let [data, setData] = useState({});
@@ -19,7 +20,7 @@ export default function Profile() {
 // console.log("ID:", id);
   async function fetchData() {
     try {
-      let res = await axios.get(`http://localhost:5000/profile/${id}`, {
+      let res = await axios.get(`${API_BASE_URL}/profile/${id}}`, {
         headers: {
           "Content-Type": "application/json",
           "authorization": `Bearer ${token}`
