@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './leftNav.module.css'   
+import styles from './LeftNav.module.css'   
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
