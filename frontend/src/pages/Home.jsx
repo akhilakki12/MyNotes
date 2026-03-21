@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Navigation from '../components/Navigation';
 import { useNavigate } from 'react-router-dom';
 import styles from './Home.module.css';
-import LeftNav from '../components/LeftNav';
+import leftNav from '../components/leftNav';
 
 export default function Home() {
   let navigate = useNavigate();
@@ -30,7 +30,7 @@ export default function Home() {
       <Navigation login='true' title={`${username}'s Notes`} username={username} id={id} />
       <div className={styles.container}>
         <div className={styles.left}>
-          <LeftNav onNoteSelect={handleNoteSelect} />
+          <leftNav onNoteSelect={handleNoteSelect} />
         </div>
         <div className={styles.right}>
           <div className={styles.right_top}>
