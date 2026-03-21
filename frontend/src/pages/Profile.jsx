@@ -46,7 +46,7 @@ export default function Profile() {
   
   return (
     <>
-      <NavBar login='true' title='MyNote' username={data.name} id={id} />
+      <Navigation login='true' title='MyNote' username={data.name} id={id} />
       <div className={styles.profileCard}>
         {err && <p className={styles.err}>{err}</p>}
         <h1 className={styles.title}>Profile</h1>
